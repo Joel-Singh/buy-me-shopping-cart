@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import RouteSwitch from './components/RouteSwitch';
+import App from './components/App.js';
 import css from './index.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouteSwitch />
+    <App />
   </React.StrictMode>
 );
