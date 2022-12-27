@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --black: #181818;
   --grey: #727272;
