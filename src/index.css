@@ -60,3 +60,19 @@ a {
   color: var(--grey);
   background-color: var(--black);
 }
+
+.header {
+  height: 15vh;
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding-left: 10px;
+  padding-bottom: 10px;
+
+  font-size: 4rem;
+  font-family: 'Averia Serif Libre', cursive;
+  color: var(--white);
+  background-color: var(--black);
+}
