@@ -13,7 +13,7 @@ body {
   height: 100vh;
 }
 
-a:-webkit-any-link {
+a {
   color:  inherit;
   text-decoration: none;
 }
