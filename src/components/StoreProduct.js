@@ -15,6 +15,7 @@ function StoreProduct(props) {
         aria-label="Remove from cart"
         onClick={onRemoveFromCartClick}
         disabled={amountInCart === 0}
+        type="button"
       ></button>
 
       <span aria-label="Amount in cart" data-testid="Amount in cart">
@@ -25,6 +26,7 @@ function StoreProduct(props) {
         aria-label="Add to cart"
         disabled={amountInCart === productLimit}
         onClick={onAddToCartClick}
+        type="button"
       ></button>
 
     </div>
