@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckoutPreviewItem renders a single preview item 1`] = `
+<div
+  data-testid="previewItemContainer"
+>
+  <div>
+    <span>
+      Me Smiling
+    </span>
+    <img
+      src="placeholder"
+    />
+    <span>
+      Amount in cart: 
+      5
+    </span>
+    <span>
+      Total Price: 
+      160
+       (
+      5
+       X 
+      32
+      )
+    </span>
+    <button
+      type="button"
+    >
+      Remove Item
+    </button>
+  </div>
+</div>
+`;
