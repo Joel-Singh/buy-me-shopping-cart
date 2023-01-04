@@ -32,3 +32,88 @@ exports[`CheckoutPreviewItem renders a single preview item 1`] = `
   </div>
 </div>
 `;
+
+exports[`CheckoutPreviewItem renders multiple items 1`] = `
+<div
+  data-testid="previewItemContainer"
+>
+  <div>
+    <span>
+      Me Smiling
+    </span>
+    <img
+      src="placeholder"
+    />
+    <span>
+      Amount in cart: 
+      5
+    </span>
+    <span>
+      Total Price: 
+      160
+       (
+      5
+       X 
+      32
+      )
+    </span>
+    <button
+      type="button"
+    >
+      Remove Item
+    </button>
+  </div>
+  <div>
+    <span>
+      Me With a frown
+    </span>
+    <img
+      src="placeholder"
+    />
+    <span>
+      Amount in cart: 
+      2
+    </span>
+    <span>
+      Total Price: 
+      130
+       (
+      2
+       X 
+      65
+      )
+    </span>
+    <button
+      type="button"
+    >
+      Remove Item
+    </button>
+  </div>
+  <div>
+    <span>
+      Me
+    </span>
+    <img
+      src="placeholder"
+    />
+    <span>
+      Amount in cart: 
+      4
+    </span>
+    <span>
+      Total Price: 
+      76
+       (
+      4
+       X 
+      19
+      )
+    </span>
+    <button
+      type="button"
+    >
+      Remove Item
+    </button>
+  </div>
+</div>
+`;
