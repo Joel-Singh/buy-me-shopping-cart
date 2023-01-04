@@ -1,24 +1,17 @@
 function CheckoutPreview({ itemsInCart }) {
   const itemsInCartAsJSX = itemsInCart.map((cartItem) => {
-    return (
-      <CheckoutPreviewItem
-        {...cartItem}
-        key={cartItem.name}
-      />
-    )
-  })
+    return <CheckoutPreviewItem {...cartItem} key={cartItem.name} />;
+  });
 
-  const totalCost = getOverallCost(itemsInCart)
+  const totalCost = getOverallCost(itemsInCart);
 
   return (
     <div>
       <h2>Checkout</h2>
-      <div data-testid="previewItemContainer">
-        {itemsInCartAsJSX}
-      </div>
+      <div data-testid="previewItemContainer">{itemsInCartAsJSX}</div>
       <div>Total Cost = {totalCost}</div>
     </div>
-  )
+  );
 }
 
 function CheckoutPreviewItem(props) {
@@ -26,7 +19,7 @@ function CheckoutPreviewItem(props) {
   const totalPrice = amountBought * price;
   return (
     <div>
-      <span>{name}</ span>
+      <span>{name}</span>
       <img src={image} />
       <span>Amount in cart: {amountBought}</span>
       <span>
@@ -41,15 +34,15 @@ function CheckoutPreviewItem(props) {
 
 function getOverallCost(itemsInCart) {
   const totalPriceOfEachItem = itemsInCart.map((cartItem) => {
-    const {price, amountBought} = cartItem
-    return price * amountBought
-  })
+    const { price, amountBought } = cartItem;
+    return price * amountBought;
+  });
 
   const overallCost = totalPriceOfEachItem.reduce((prev, curr) => {
-    return prev + curr
-  }, 0)
+    return prev + curr;
+  }, 0);
 
-  return overallCost
+  return overallCost;
 }
 
-export default CheckoutPreview
+export default CheckoutPreview;
