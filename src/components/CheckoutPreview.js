@@ -9,8 +9,11 @@ function CheckoutPreview({ itemsInCart }) {
   })
 
   return (
-    <div data-testid="previewItemContainer">
-      {itemsInCartAsJSX}
+    <div>
+      <h2>Checkout</h2>
+      <div data-testid="previewItemContainer">
+        {itemsInCartAsJSX}
+      </div>
     </div>
   )
 }
