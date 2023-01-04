@@ -1,13 +1,9 @@
 function CheckoutPreview({ itemsInCart }) {
   const itemsInCartAsJSX = itemsInCart.map((cartItem) => {
-    const {name, price, amountBought, image} = cartItem
     return (
       <CheckoutPreviewItem
-        image={image}
-        amountBought={amountBought}
-        price={price}
-        name={name}
-        key={name}
+        {...cartItem}
+        key={cartItem.name}
       />
     )
   })
