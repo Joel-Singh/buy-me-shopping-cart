@@ -8,12 +8,15 @@ function CheckoutPreview({ itemsInCart }) {
     )
   })
 
+  const totalCost = getOverallCost(itemsInCart)
+
   return (
     <div>
       <h2>Checkout</h2>
       <div data-testid="previewItemContainer">
         {itemsInCartAsJSX}
       </div>
+      <div>Total Cost = {totalCost}</div>
     </div>
   )
 }
@@ -34,6 +37,19 @@ function CheckoutPreviewItem(props) {
       </button>
     </div>
   );
+}
+
+function getOverallCost(itemsInCart) {
+  const totalPriceOfEachItem = itemsInCart.map((cartItem) => {
+    const {price, amountBought} = cartItem
+    return price * amountBought
+  })
+
+  const overallCost = totalPriceOfEachItem.reduce((prev, curr) => {
+    return prev + curr
+  }, 0)
+
+  return overallCost
 }
 
 export default CheckoutPreview

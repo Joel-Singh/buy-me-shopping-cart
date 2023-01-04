@@ -47,3 +47,30 @@ test("CheckoutPreviewItem renders multiple items", () => {
 
   expect(previewItemContainer).toMatchSnapshot()
 })
+
+test("CheckoutPreview renders total cost", () => {
+  const itemsInCart = [
+    {
+      name: "Me Smiling",
+      price: 32,
+      amountBought: 5,
+      image: "placeholder",
+    },
+    {
+      name: "Me With a frown",
+      price: 65,
+      amountBought: 2,
+      image: "placeholder",
+    },
+    {
+      name: "Me",
+      price: 19,
+      amountBought: 4,
+      image: "placeholder",
+    }
+  ]
+
+  render(<CheckoutPreview itemsInCart={itemsInCart} />)
+  const totalHTMLContainer = screen.getByText("Total Cost", {exact: false})
+  expect(totalHTMLContainer).toMatchSnapshot()
+})
