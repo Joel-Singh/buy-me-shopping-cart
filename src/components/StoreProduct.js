@@ -5,6 +5,7 @@ function StoreProduct(props) {
     amountInCart,
     productLimit = Infinity,
     image,
+    name,
   } = props;
 
   return (
@@ -29,6 +30,7 @@ function StoreProduct(props) {
         type="button"
       ></button>
 
+      <div>{name}</div>
     </div>
   );
 }
