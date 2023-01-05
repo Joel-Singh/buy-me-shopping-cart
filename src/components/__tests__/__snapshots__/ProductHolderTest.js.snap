@@ -28,3 +28,76 @@ exports[`Product holder properly renders a single product 1`] = `
   </div>
 </div>
 `;
+
+exports[`Product holder properly renders three products 1`] = `
+<div>
+  <div>
+    <div>
+      <img
+        src="frown placeholder"
+      />
+      <button
+        aria-label="Remove from cart"
+        type="button"
+      />
+      <span
+        aria-label="Amount in cart"
+        data-testid="Amount in cart"
+      >
+        9
+      </span>
+      <button
+        aria-label="Add to cart"
+        type="button"
+      />
+      <div>
+        Frown
+      </div>
+    </div>
+    <div>
+      <img
+        src="smile placeholder"
+      />
+      <button
+        aria-label="Remove from cart"
+        type="button"
+      />
+      <span
+        aria-label="Amount in cart"
+        data-testid="Amount in cart"
+      >
+        2
+      </span>
+      <button
+        aria-label="Add to cart"
+        type="button"
+      />
+      <div>
+        Smile
+      </div>
+    </div>
+    <div>
+      <img
+        src="depression placeholder"
+      />
+      <button
+        aria-label="Remove from cart"
+        type="button"
+      />
+      <span
+        aria-label="Amount in cart"
+        data-testid="Amount in cart"
+      >
+        6
+      </span>
+      <button
+        aria-label="Add to cart"
+        type="button"
+      />
+      <div>
+        Depression
+      </div>
+    </div>
+  </div>
+</div>
+`;

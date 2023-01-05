@@ -1,9 +1,11 @@
 import StoreProduct from "./StoreProduct"
 function ProductHolder({ productList }) {
+  const productsAsHTML = productList.map(productInformation => {
+    return <StoreProduct key={productInformation.name} {...productInformation} />
+  })
+
   return (
-    <div>
-      <StoreProduct  {...productList[0]}/>
-    </div>
+    <div>{productsAsHTML}</div>
   )
 }
 

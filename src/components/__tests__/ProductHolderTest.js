@@ -15,3 +15,28 @@ test("Product holder properly renders a single product", () => {
 
   expect(productHolder).toMatchSnapshot()
 })
+
+
+test("Product holder properly renders three products", () => {
+  const productList = [
+    {
+      amountInCart: 9,
+      image: "frown placeholder",
+      name: "Frown",
+    },
+    {
+      amountInCart: 2,
+      image: "smile placeholder",
+      name: "Smile",
+    },
+    {
+      amountInCart: 6,
+      image: "depression placeholder",
+      name: "Depression",
+    },
+  ];
+
+  const { container : productHolder } = render(<ProductHolder productList={productList} />)
+
+  expect(productHolder).toMatchSnapshot()
+})
