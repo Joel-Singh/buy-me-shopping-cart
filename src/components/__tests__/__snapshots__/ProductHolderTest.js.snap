@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product holder properly renders a single product 1`] = `
+<div>
+  <div>
+    <div>
+      <img
+        src="placeholder"
+      />
+      <button
+        aria-label="Remove from cart"
+        type="button"
+      />
+      <span
+        aria-label="Amount in cart"
+        data-testid="Amount in cart"
+      >
+        5
+      </span>
+      <button
+        aria-label="Add to cart"
+        type="button"
+      />
+      <div>
+        Me smiling
+      </div>
+    </div>
+  </div>
+</div>
+`;
