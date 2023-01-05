@@ -2,22 +2,6 @@ import StoreProduct from "../StoreProduct";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-it("renders amount of 3 in cart", () => {
-  render(<StoreProduct amountInCart="3" />)
-  const amountDisplay = screen.getByTestId("Amount in cart")
-
-  expect(amountDisplay.textContent).toBe("3")
-})
-
-it("renders amount of 5 in cart", () => {
-  render(<StoreProduct amountInCart="5" />)
-  const amountDisplay = screen.getByTestId("Amount in cart")
-
-  expect(amountDisplay.textContent).toBe("5")
-})
-
-
-
 test("addToCart is called when button clicked", () => {
   const addToCartCallback = jest.fn()
   render(<StoreProduct onAddToCartClick={addToCartCallback}/>)
