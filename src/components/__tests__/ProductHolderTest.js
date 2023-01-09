@@ -41,27 +41,32 @@ test("Product holder properly renders three products", () => {
   expect(productHolder).toMatchSnapshot()
 })
 
-test("Product Holder properly adds addToCartFunction to a single product", () => {
+test("Cart functions of a single Product within a Product Holder are called when clicked", () => {
   const smileProduct = { name: "smile" }
   const productList = [
     smileProduct
   ];
 
   const addToCartFunction = jest.fn();
+  const removeFromCartFunction = jest.fn();
 
   render(
     <ProductHolder
       productList={productList}
       addToCartFunction={addToCartFunction}
+      removeFromCartFunction={removeFromCartFunction}
     />
   )
 
   const smileProductElement = screen.getByText(smileProduct.name).parentElement
   const addToCartButton = getByRole(smileProductElement, 'button', {name: "Add to cart"})
+  const removeFromCartButton = getByRole(smileProductElement, 'button', {name: "Remove from cart"})
 
   userEvent.click(addToCartButton)
+  userEvent.click(removeFromCartButton)
 
   expect(addToCartFunction).toBeCalledWith("smile")
+  expect(removeFromCartFunction).toBeCalledWith("smile")
 })
 
 test("Product Holder properly adds addToCartFunction to multiple products", () => {
