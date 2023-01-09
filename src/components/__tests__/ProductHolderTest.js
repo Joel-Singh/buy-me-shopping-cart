@@ -69,7 +69,7 @@ test("Cart functions of a single Product within a Product Holder are called when
   expect(removeFromCartFunction).toBeCalledWith("smile")
 })
 
-test("Product Holder properly adds addToCartFunction to multiple products", () => {
+test("Cart functions of a multiple Products within a Product Holder are called when clicked", () => {
   const smileProduct = { name: "smile" }
   const frownProduct = { name: "frown" }
   const terrorProduct = {name: "terror" }
@@ -81,11 +81,13 @@ test("Product Holder properly adds addToCartFunction to multiple products", () =
   ];
 
   const addToCartFunction = jest.fn();
+  const removeFromCartFunction = jest.fn();
 
   render(
     <ProductHolder
       productList={productList}
       addToCartFunction={addToCartFunction}
+      removeFromCartFunction={removeFromCartFunction}
     />
   )
 
@@ -95,17 +97,36 @@ test("Product Holder properly adds addToCartFunction to multiple products", () =
     return addToCartButton
   }
 
+  function getRemoveFromCartButton(name) {
+    const productElement = screen.getByText(name).parentElement
+    const removeFromCartButton = getByRole(productElement, 'button', {name: "Remove from cart"})
+    return removeFromCartButton
+  }
+
   const smileAddToCartButton = getAddToCartButton("smile")
   const frownAddToCartButton = getAddToCartButton("frown")
   const terrorAddToCartButton = getAddToCartButton("terror")
+
+  const smileRemoveFromCartButton = getRemoveFromCartButton("smile")
+  const frownRemoveFromCartButton = getRemoveFromCartButton("frown")
+  const terrorRemoveFromCartButton = getRemoveFromCartButton("terror")
 
   userEvent.click(smileAddToCartButton)
   userEvent.click(frownAddToCartButton)
   userEvent.click(terrorAddToCartButton)
 
+  userEvent.click(smileRemoveFromCartButton)
+  userEvent.click(frownRemoveFromCartButton)
+  userEvent.click(terrorRemoveFromCartButton)
+
   expect(addToCartFunction).toBeCalledTimes(3)
   expect(addToCartFunction).toBeCalledWith("smile")
   expect(addToCartFunction).toBeCalledWith("frown")
   expect(addToCartFunction).toBeCalledWith("terror")
+
+  expect(removeFromCartFunction).toBeCalledTimes(3)
+  expect(removeFromCartFunction).toBeCalledWith("smile")
+  expect(removeFromCartFunction).toBeCalledWith("frown")
+  expect(removeFromCartFunction).toBeCalledWith("terror")
 })
 
