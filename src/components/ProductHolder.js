@@ -1,12 +1,14 @@
 import StoreProduct from "./StoreProduct"
 function ProductHolder({ productList, addToCartFunction, removeFromCartFunction }) {
   const productsAsHTML = productList.map(productInformation => {
-    const name = productInformation.name
+    const {amountInCart, image, name} = productInformation;
 
     return (
       <StoreProduct
         key={name}
-        {...productInformation}
+        amountInCart={amountInCart}
+        image={image}
+        name={name}
         onAddToCartClick={() => addToCartFunction(name)}
         onRemoveFromCartClick={() => removeFromCartFunction(name)}
       />)
