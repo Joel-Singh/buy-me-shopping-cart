@@ -12,9 +12,9 @@ test("addToCart is called when button clicked", () => {
   expect(addToCartCallback).toHaveBeenCalled()
 })
 
-test("addToCart is NOT called when amountInCart === productLimit", () => {
+test("addToCart is NOT called when amountBought === productLimit", () => {
   const addToCartCallback = jest.fn()
-  render(<StoreProduct amountInCart={3} productLimit={3} onAddToCartClick={addToCartCallback}/>)
+  render(<StoreProduct amountBought={3} productLimit={3} onAddToCartClick={addToCartCallback}/>)
 
   const addToCartButton = screen.getByRole("button", { name: "Add to cart"})
   userEvent.click(addToCartButton)
@@ -34,9 +34,9 @@ test("removeFromCart is called when button clicked", () => {
   expect(removeFromCartCallback).toHaveBeenCalled()
 })
 
-test("removeFromCart is NOT called when amountInCart is 0", () => {
+test("removeFromCart is NOT called when amountBought is 0", () => {
   const removeFromCartCallback = jest.fn()
-  render(<StoreProduct amountInCart={0} onRemoveFromCartClick={removeFromCartCallback}/>)
+  render(<StoreProduct amountBought={0} onRemoveFromCartClick={removeFromCartCallback}/>)
 
   const removeFromCartButton = screen.getByRole("button", { name: "Remove from cart"})
   userEvent.click(removeFromCartButton)

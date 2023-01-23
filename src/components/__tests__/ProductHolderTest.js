@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 test("Product holder properly renders a single product", () => {
   const productList = [
     {
-      amountInCart: 5,
+      amountBought: 5,
       image: "placeholder",
       name: "Me smiling",
     }
@@ -20,17 +20,17 @@ test("Product holder properly renders a single product", () => {
 test("Product holder properly renders three products", () => {
   const productList = [
     {
-      amountInCart: 9,
+      amountBought: 9,
       image: "frown placeholder",
       name: "Frown",
     },
     {
-      amountInCart: 2,
+      amountBought: 2,
       image: "smile placeholder",
       name: "Smile",
     },
     {
-      amountInCart: 6,
+      amountBought: 6,
       image: "depression placeholder",
       name: "Depression",
     },

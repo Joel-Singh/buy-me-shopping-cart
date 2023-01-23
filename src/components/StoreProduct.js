@@ -2,7 +2,7 @@ function StoreProduct(props) {
   const {
     onAddToCartClick,
     onRemoveFromCartClick,
-    amountInCart,
+    amountBought,
     productLimit = Infinity,
     image,
     name,
@@ -15,17 +15,17 @@ function StoreProduct(props) {
       <button
         aria-label="Remove from cart"
         onClick={onRemoveFromCartClick}
-        disabled={amountInCart === 0}
+        disabled={amountBought === 0}
         type="button"
       ></button>
 
       <span aria-label="Amount in cart" data-testid="Amount in cart">
-        {amountInCart}
+        {amountBought}
       </span>
 
       <button
         aria-label="Add to cart"
-        disabled={amountInCart === productLimit}
+        disabled={amountBought === productLimit}
         onClick={onAddToCartClick}
         type="button"
       ></button>
