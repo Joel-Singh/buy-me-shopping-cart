@@ -1,25 +1,11 @@
 import { addItemToCart, removeItemFromCart } from './../../utility/changeCartFunctions.js'
+import { createCartItem } from './../../utility/cartCreationFunctions'
 
 test("Add single item to cart", () => {
   let itemsInCart = [
-    {
-      name: "Me Smiling",
-      price: 32,
-      amountBought: 5,
-      image: "placeholder",
-    },
-    {
-      name: "Me With a frown",
-      price: 65,
-      amountBought: 2,
-      image: "placeholder",
-    },
-    {
-      name: "Me",
-      price: 19,
-      amountBought: 4,
-      image: "placeholder",
-    }
+    createCartItem("Me Smiling", 32, 5, "placeholder"),
+    createCartItem("Me With a frown", 65, 2, "placeholder"),
+    createCartItem("Me", 19, 4, "placeholder"),
   ]
 
   itemsInCart = addItemToCart(itemsInCart, "Me Smiling")
@@ -32,24 +18,9 @@ test("Add single item to cart", () => {
 
 test("Remove single item from cart", () => {
   let itemsInCart = [
-    {
-      name: "Me Smiling",
-      price: 32,
-      amountBought: 5,
-      image: "placeholder",
-    },
-    {
-      name: "Me With a frown",
-      price: 65,
-      amountBought: 2,
-      image: "placeholder",
-    },
-    {
-      name: "Me",
-      price: 19,
-      amountBought: 4,
-      image: "placeholder",
-    }
+    createCartItem("Me Smiling", 32, 5, "placeholder"),
+    createCartItem("Me With a frown", 65, 2, "placeholder"),
+    createCartItem("Me", 19, 4, "placeholder"),
   ]
 
   itemsInCart = removeItemFromCart(itemsInCart, "Me Smiling")
@@ -63,24 +34,9 @@ test("Remove single item from cart", () => {
 
 test("addItemToCart is non-mutating", () => {
   let itemsInCart = [
-    {
-      name: "Me Smiling",
-      price: 32,
-      amountBought: 5,
-      image: "placeholder",
-    },
-    {
-      name: "Me With a frown",
-      price: 65,
-      amountBought: 2,
-      image: "placeholder",
-    },
-    {
-      name: "Me",
-      price: 19,
-      amountBought: 4,
-      image: "placeholder",
-    }
+    createCartItem("Me Smiling", 32, 5, "placeholder"),
+    createCartItem("Me With a frown", 65, 2, "placeholder"),
+    createCartItem("Me", 19, 4, "placeholder"),
   ]
 
   addItemToCart(itemsInCart, "Me Smiling")
@@ -92,24 +48,9 @@ test("addItemToCart is non-mutating", () => {
 
 test("removeItemFromCart is non-mutating", () => {
   let itemsInCart = [
-    {
-      name: "Me Smiling",
-      price: 32,
-      amountBought: 5,
-      image: "placeholder",
-    },
-    {
-      name: "Me With a frown",
-      price: 65,
-      amountBought: 2,
-      image: "placeholder",
-    },
-    {
-      name: "Me",
-      price: 19,
-      amountBought: 4,
-      image: "placeholder",
-    }
+    createCartItem("Me Smiling", 32, 5, "placeholder"),
+    createCartItem("Me With a frown", 65, 2, "placeholder"),
+    createCartItem("Me", 19, 4, "placeholder"),
   ]
 
   removeItemFromCart(itemsInCart, "Me Smiling")
