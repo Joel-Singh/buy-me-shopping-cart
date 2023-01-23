@@ -1,15 +1,11 @@
 import CheckoutPreview from "../CheckoutPreview";
 import { render, screen } from "@testing-library/react";
+import { createCartItem } from './../../utility/cartCreationFunctions'
 import userEvent from "@testing-library/user-event";
 
 test("CheckoutPreviewItem renders a single preview item", () => {
   const itemsInCart = [
-    {
-      name: "Me Smiling",
-      price: 32,
-      amountBought: 5,
-      image: "placeholder",
-    }
+    createCartItem("Me Smiling", 32, 5, "placeholder"),
   ]
 
   render(<CheckoutPreview itemsInCart={itemsInCart} />)
@@ -21,24 +17,9 @@ test("CheckoutPreviewItem renders a single preview item", () => {
 
 test("CheckoutPreviewItem renders multiple items", () => {
   const itemsInCart = [
-    {
-      name: "Me Smiling",
-      price: 32,
-      amountBought: 5,
-      image: "placeholder",
-    },
-    {
-      name: "Me With a frown",
-      price: 65,
-      amountBought: 2,
-      image: "placeholder",
-    },
-    {
-      name: "Me",
-      price: 19,
-      amountBought: 4,
-      image: "placeholder",
-    }
+    createCartItem("Me Smiling", 32, 5, "placeholder"),
+    createCartItem("Me With a frown", 65, 2, "placeholder"),
+    createCartItem("Me", 19, 4, "placeholder"),
   ]
 
   render(<CheckoutPreview itemsInCart={itemsInCart} />)
@@ -50,24 +31,9 @@ test("CheckoutPreviewItem renders multiple items", () => {
 
 test("CheckoutPreview renders total cost", () => {
   const itemsInCart = [
-    {
-      name: "Me Smiling",
-      price: 32,
-      amountBought: 5,
-      image: "placeholder",
-    },
-    {
-      name: "Me With a frown",
-      price: 65,
-      amountBought: 2,
-      image: "placeholder",
-    },
-    {
-      name: "Me",
-      price: 19,
-      amountBought: 4,
-      image: "placeholder",
-    }
+    createCartItem("Me Smiling", 32, 5, "placeholder"),
+    createCartItem("Me With a frown", 65, 2, "placeholder"),
+    createCartItem("Me", 19, 4, "placeholder"),
   ]
 
   render(<CheckoutPreview itemsInCart={itemsInCart} />)

@@ -1,14 +1,11 @@
 import ProductHolder from "../ProductHolder";
 import { getByRole, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { createCartItem } from "../../utility/cartCreationFunctions";
 
 test("Product holder properly renders a single product", () => {
   const productList = [
-    {
-      amountBought: 5,
-      image: "placeholder",
-      name: "Me smiling",
-    }
+    createCartItem("Me smiling", 0, 5, "placeholder")
   ];
 
   const { container : productHolder } = render(<ProductHolder productList={productList} />)
@@ -19,21 +16,9 @@ test("Product holder properly renders a single product", () => {
 
 test("Product holder properly renders three products", () => {
   const productList = [
-    {
-      amountBought: 9,
-      image: "frown placeholder",
-      name: "Frown",
-    },
-    {
-      amountBought: 2,
-      image: "smile placeholder",
-      name: "Smile",
-    },
-    {
-      amountBought: 6,
-      image: "depression placeholder",
-      name: "Depression",
-    },
+    createCartItem("Frown", 0, 9, "frown placeholder"),
+    createCartItem("Smile", 0, 2, "smile placeholder"),
+    createCartItem("Depression", 0, 6, "depression placeholder"),
   ];
 
   const { container : productHolder } = render(<ProductHolder productList={productList} />)
@@ -42,7 +27,7 @@ test("Product holder properly renders three products", () => {
 })
 
 test("Cart functions of a single Product within a Product Holder are called when clicked", () => {
-  const smileProduct = { name: "smile" }
+  const smileProduct = createCartItem("smile", 0, 5, "placeholder")
   const productList = [
     smileProduct
   ];
@@ -70,9 +55,9 @@ test("Cart functions of a single Product within a Product Holder are called when
 })
 
 test("Cart functions of a multiple Products within a Product Holder are called when clicked", () => {
-  const smileProduct = { name: "smile" }
-  const frownProduct = { name: "frown" }
-  const terrorProduct = {name: "terror" }
+  const smileProduct = createCartItem("smile", 0, 5, "placeholder")
+  const frownProduct = createCartItem("frown", 0, 5, "placeholder")
+  const terrorProduct = createCartItem("terror", 0, 5, "placeholder")
 
   const productList = [
     smileProduct,
