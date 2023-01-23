@@ -1,4 +1,4 @@
-import { addItemToCart, removeItemFromCart } from './../../utility/cartFunctions.js'
+import { addItemToCart, removeItemFromCart } from './../../utility/changeCartFunctions.js'
 
 test("Add single item to cart", () => {
   let itemsInCart = [
