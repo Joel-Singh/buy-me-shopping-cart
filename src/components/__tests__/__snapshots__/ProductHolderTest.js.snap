@@ -3,12 +3,15 @@
 exports[`Product holder properly renders a single product 1`] = `
 <div>
   <div>
-    <div>
+    <div
+      class="store-product"
+    >
       <img
         src="placeholder"
       />
       <button
         aria-label="Remove from cart"
+        class="store-product__remove-button"
         type="button"
       />
       <span
@@ -19,9 +22,12 @@ exports[`Product holder properly renders a single product 1`] = `
       </span>
       <button
         aria-label="Add to cart"
+        class="store-product__add-button"
         type="button"
       />
-      <div>
+      <div
+        class="store-product__name"
+      >
         Me smiling
       </div>
     </div>
@@ -32,12 +38,15 @@ exports[`Product holder properly renders a single product 1`] = `
 exports[`Product holder properly renders three products 1`] = `
 <div>
   <div>
-    <div>
+    <div
+      class="store-product"
+    >
       <img
         src="frown placeholder"
       />
       <button
         aria-label="Remove from cart"
+        class="store-product__remove-button"
         type="button"
       />
       <span
@@ -48,18 +57,24 @@ exports[`Product holder properly renders three products 1`] = `
       </span>
       <button
         aria-label="Add to cart"
+        class="store-product__add-button"
         type="button"
       />
-      <div>
+      <div
+        class="store-product__name"
+      >
         Frown
       </div>
     </div>
-    <div>
+    <div
+      class="store-product"
+    >
       <img
         src="smile placeholder"
       />
       <button
         aria-label="Remove from cart"
+        class="store-product__remove-button"
         type="button"
       />
       <span
@@ -70,18 +85,24 @@ exports[`Product holder properly renders three products 1`] = `
       </span>
       <button
         aria-label="Add to cart"
+        class="store-product__add-button"
         type="button"
       />
-      <div>
+      <div
+        class="store-product__name"
+      >
         Smile
       </div>
     </div>
-    <div>
+    <div
+      class="store-product"
+    >
       <img
         src="depression placeholder"
       />
       <button
         aria-label="Remove from cart"
+        class="store-product__remove-button"
         type="button"
       />
       <span
@@ -92,9 +113,12 @@ exports[`Product holder properly renders three products 1`] = `
       </span>
       <button
         aria-label="Add to cart"
+        class="store-product__add-button"
         type="button"
       />
-      <div>
+      <div
+        class="store-product__name"
+      >
         Depression
       </div>
     </div>

@@ -9,10 +9,11 @@ function StoreProduct(props) {
   } = props;
 
   return (
-    <div>
+    <div className="store-product">
       <img src={image} />
 
       <button
+        className="store-product__remove-button"
         aria-label="Remove from cart"
         onClick={onRemoveFromCartClick}
         disabled={amountBought === 0}
@@ -27,13 +28,14 @@ function StoreProduct(props) {
       </span>
 
       <button
+        className="store-product__add-button"
         aria-label="Add to cart"
         disabled={amountBought === productLimit}
         onClick={onAddToCartClick}
         type="button"
       ></button>
 
-      <div>{name}</div>
+      <div className="store-product__name">{name}</div>
     </div>
   );
 }
