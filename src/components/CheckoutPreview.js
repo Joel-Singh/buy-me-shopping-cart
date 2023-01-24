@@ -36,9 +36,6 @@ function CheckoutPreviewItem(props) {
       <span className="checkout-preview-item__total-price">
         Total Price: {totalPrice} ({amountBought} X {price})
       </span>
-      <button type="button" onClick={removeItemCallback}>
-        Remove Item
-      </button>
     </div>
   );
 }

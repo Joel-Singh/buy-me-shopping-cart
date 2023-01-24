@@ -41,11 +41,6 @@ exports[`CheckoutPreviewItem renders a single preview item 1`] = `
       32
       )
     </span>
-    <button
-      type="button"
-    >
-      Remove Item
-    </button>
   </div>
 </div>
 `;
@@ -82,11 +77,6 @@ exports[`CheckoutPreviewItem renders multiple items 1`] = `
       32
       )
     </span>
-    <button
-      type="button"
-    >
-      Remove Item
-    </button>
   </div>
   <div
     class="checkout-preview-item"
@@ -116,11 +106,6 @@ exports[`CheckoutPreviewItem renders multiple items 1`] = `
       65
       )
     </span>
-    <button
-      type="button"
-    >
-      Remove Item
-    </button>
   </div>
   <div
     class="checkout-preview-item"
@@ -150,11 +135,6 @@ exports[`CheckoutPreviewItem renders multiple items 1`] = `
       19
       )
     </span>
-    <button
-      type="button"
-    >
-      Remove Item
-    </button>
   </div>
 </div>
 `;
