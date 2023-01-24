@@ -1,6 +1,6 @@
 import StoreProduct from "./StoreProduct"
-function ProductHolder({ productList, addToCartFunction, removeFromCartFunction }) {
-  const productsAsHTML = productList.map(productInformation => {
+function ProductHolder({ cart, addToCartFunction, removeFromCartFunction }) {
+  const productsAsHTML = cart.map(productInformation => {
     const {amountBought, image, name} = productInformation;
 
     return (

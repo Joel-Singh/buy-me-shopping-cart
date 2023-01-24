@@ -4,31 +4,31 @@ import userEvent from "@testing-library/user-event";
 import { createCartItem } from "../../utility/cartCreationFunctions";
 
 test("Product holder properly renders a single product", () => {
-  const productList = [
+  const cart = [
     createCartItem("Me smiling", 0, 5, "placeholder")
   ];
 
-  const { container : productHolder } = render(<ProductHolder productList={productList} />)
+  const { container : productHolder } = render(<ProductHolder cart={cart} />)
 
   expect(productHolder).toMatchSnapshot()
 })
 
 
 test("Product holder properly renders three products", () => {
-  const productList = [
+  const cart = [
     createCartItem("Frown", 0, 9, "frown placeholder"),
     createCartItem("Smile", 0, 2, "smile placeholder"),
     createCartItem("Depression", 0, 6, "depression placeholder"),
   ];
 
-  const { container : productHolder } = render(<ProductHolder productList={productList} />)
+  const { container : productHolder } = render(<ProductHolder cart={cart} />)
 
   expect(productHolder).toMatchSnapshot()
 })
 
 test("Cart functions of a single Product within a Product Holder are called when clicked", () => {
   const smileProduct = createCartItem("smile", 0, 5, "placeholder")
-  const productList = [
+  const cart = [
     smileProduct
   ];
 
@@ -37,7 +37,7 @@ test("Cart functions of a single Product within a Product Holder are called when
 
   render(
     <ProductHolder
-      productList={productList}
+      cart={cart}
       addToCartFunction={addToCartFunction}
       removeFromCartFunction={removeFromCartFunction}
     />
@@ -59,7 +59,7 @@ test("Cart functions of a multiple Products within a Product Holder are called w
   const frownProduct = createCartItem("frown", 0, 5, "placeholder")
   const terrorProduct = createCartItem("terror", 0, 5, "placeholder")
 
-  const productList = [
+  const cart = [
     smileProduct,
     frownProduct,
     terrorProduct,
@@ -70,7 +70,7 @@ test("Cart functions of a multiple Products within a Product Holder are called w
 
   render(
     <ProductHolder
-      productList={productList}
+      cart={cart}
       addToCartFunction={addToCartFunction}
       removeFromCartFunction={removeFromCartFunction}
     />
