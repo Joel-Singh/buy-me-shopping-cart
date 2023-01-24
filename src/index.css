@@ -76,3 +76,35 @@ a {
   color: var(--white);
   background-color: var(--black);
 }
+
+.product-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.store-product {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.store-product img {
+  width: inherit;
+  grid-column: span 3;
+}
+
+.store-product__name {
+  grid-column: span 3;
+  margin-top: 10px;
+}
+
+.store-product button {
+  height: 20px;
+  width: 50px;
+}
