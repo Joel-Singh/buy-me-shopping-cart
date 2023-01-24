@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CheckoutPreview renders total cost 1`] = `
-<div>
+<div
+  class="checkout-preview__total-cost"
+>
   Total Cost = 
   366
 </div>
@@ -11,18 +13,26 @@ exports[`CheckoutPreviewItem renders a single preview item 1`] = `
 <div
   data-testid="previewItemContainer"
 >
-  <div>
-    <span>
+  <div
+    class="checkout-preview-item"
+  >
+    <span
+      class="checkout-preview-item__name"
+    >
       Me Smiling
     </span>
     <img
       src="placeholder"
     />
-    <span>
+    <span
+      class="checkout-preview-item__cart-amount"
+    >
       Amount in cart: 
       5
     </span>
-    <span>
+    <span
+      class="checkout-preview-item__total-price"
+    >
       Total Price: 
       160
        (
@@ -44,18 +54,26 @@ exports[`CheckoutPreviewItem renders multiple items 1`] = `
 <div
   data-testid="previewItemContainer"
 >
-  <div>
-    <span>
+  <div
+    class="checkout-preview-item"
+  >
+    <span
+      class="checkout-preview-item__name"
+    >
       Me Smiling
     </span>
     <img
       src="placeholder"
     />
-    <span>
+    <span
+      class="checkout-preview-item__cart-amount"
+    >
       Amount in cart: 
       5
     </span>
-    <span>
+    <span
+      class="checkout-preview-item__total-price"
+    >
       Total Price: 
       160
        (
@@ -70,18 +88,26 @@ exports[`CheckoutPreviewItem renders multiple items 1`] = `
       Remove Item
     </button>
   </div>
-  <div>
-    <span>
+  <div
+    class="checkout-preview-item"
+  >
+    <span
+      class="checkout-preview-item__name"
+    >
       Me With a frown
     </span>
     <img
       src="placeholder"
     />
-    <span>
+    <span
+      class="checkout-preview-item__cart-amount"
+    >
       Amount in cart: 
       2
     </span>
-    <span>
+    <span
+      class="checkout-preview-item__total-price"
+    >
       Total Price: 
       130
        (
@@ -96,18 +122,26 @@ exports[`CheckoutPreviewItem renders multiple items 1`] = `
       Remove Item
     </button>
   </div>
-  <div>
-    <span>
+  <div
+    class="checkout-preview-item"
+  >
+    <span
+      class="checkout-preview-item__name"
+    >
       Me
     </span>
     <img
       src="placeholder"
     />
-    <span>
+    <span
+      class="checkout-preview-item__cart-amount"
+    >
       Amount in cart: 
       4
     </span>
-    <span>
+    <span
+      class="checkout-preview-item__total-price"
+    >
       Total Price: 
       76
        (

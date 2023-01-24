@@ -17,10 +17,10 @@ function CheckoutPreview({ cart }) {
   const totalCost = getOverallCost(cart);
 
   return (
-    <div>
+    <div className="checkout-preview">
       <h2>Checkout</h2>
       <div data-testid="previewItemContainer">{cartAsJSX}</div>
-      <div>Total Cost = {totalCost}</div>
+      <div className="checkout-preview__total-cost">Total Cost = {totalCost}</div>
     </div>
   );
 }
@@ -29,11 +29,11 @@ function CheckoutPreviewItem(props) {
   const { image, amountBought, price, name, removeItemCallback } = props;
   const totalPrice = amountBought * price;
   return (
-    <div>
-      <span>{name}</span>
+    <div className="checkout-preview-item">
+      <span className="checkout-preview-item__name">{name}</span>
       <img src={image} />
-      <span>Amount in cart: {amountBought}</span>
-      <span>
+      <span className="checkout-preview-item__cart-amount">Amount in cart: {amountBought}</span>
+      <span className="checkout-preview-item__total-price">
         Total Price: {totalPrice} ({amountBought} X {price})
       </span>
       <button type="button" onClick={removeItemCallback}>
