@@ -19,7 +19,10 @@ function StoreProduct(props) {
         type="button"
       ></button>
 
-      <span aria-label="Amount in cart" data-testid="Amount in cart">
+      <span
+        aria-label="Amount in cart"
+        data-testid="Amount in cart"
+      >
         {amountBought}
       </span>
 

@@ -1,15 +1,18 @@
 function CheckoutPreview({ cart }) {
-  const cartAsJSX = cart.map((cartItem) => {
-    const {name, price, amountBought, image} = cartItem;
-    return (
-      <CheckoutPreviewItem
-        name={name}
-        price={price}
-        amountBought={amountBought}
-        image={image}
-        key={name} />
-    )
-  });
+  const cartAsJSX =
+    cart.map((cartItem) =>
+    {
+      const {name, price, amountBought, image} = cartItem;
+      return (
+        <CheckoutPreviewItem
+          name={name}
+          price={price}
+          amountBought={amountBought}
+          image={image}
+          key={name}
+        />
+      )
+    });
 
   const totalCost = getOverallCost(cart);
 
