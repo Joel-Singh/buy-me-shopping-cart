@@ -1,5 +1,5 @@
-function CheckoutPreview({ itemsInCart }) {
-  const itemsInCartAsJSX = itemsInCart.map((cartItem) => {
+function CheckoutPreview({ cart }) {
+  const cartAsJSX = cart.map((cartItem) => {
     const {name, price, amountBought, image} = cartItem;
     return (
       <CheckoutPreviewItem
@@ -11,12 +11,12 @@ function CheckoutPreview({ itemsInCart }) {
     )
   });
 
-  const totalCost = getOverallCost(itemsInCart);
+  const totalCost = getOverallCost(cart);
 
   return (
     <div>
       <h2>Checkout</h2>
-      <div data-testid="previewItemContainer">{itemsInCartAsJSX}</div>
+      <div data-testid="previewItemContainer">{cartAsJSX}</div>
       <div>Total Cost = {totalCost}</div>
     </div>
   );
@@ -40,8 +40,8 @@ function CheckoutPreviewItem(props) {
   );
 }
 
-function getOverallCost(itemsInCart) {
-  const totalPriceOfEachItem = itemsInCart.map((cartItem) => {
+function getOverallCost(cart) {
+  const totalPriceOfEachItem = cart.map((cartItem) => {
     const { price, amountBought } = cartItem;
     return price * amountBought;
   });
