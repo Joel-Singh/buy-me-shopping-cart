@@ -15,7 +15,9 @@ exports[`Product holder properly renders a single product 1`] = `
         aria-label="Remove from cart"
         class="store-product__remove-button"
         type="button"
-      />
+      >
+        --
+      </button>
       <span
         aria-label="Amount in cart"
         data-testid="Amount in cart"
@@ -26,7 +28,9 @@ exports[`Product holder properly renders a single product 1`] = `
         aria-label="Add to cart"
         class="store-product__add-button"
         type="button"
-      />
+      >
+        ++
+      </button>
       <div
         class="store-product__name"
       >
@@ -52,7 +56,9 @@ exports[`Product holder properly renders three products 1`] = `
         aria-label="Remove from cart"
         class="store-product__remove-button"
         type="button"
-      />
+      >
+        --
+      </button>
       <span
         aria-label="Amount in cart"
         data-testid="Amount in cart"
@@ -63,7 +69,9 @@ exports[`Product holder properly renders three products 1`] = `
         aria-label="Add to cart"
         class="store-product__add-button"
         type="button"
-      />
+      >
+        ++
+      </button>
       <div
         class="store-product__name"
       >
@@ -80,7 +88,9 @@ exports[`Product holder properly renders three products 1`] = `
         aria-label="Remove from cart"
         class="store-product__remove-button"
         type="button"
-      />
+      >
+        --
+      </button>
       <span
         aria-label="Amount in cart"
         data-testid="Amount in cart"
@@ -91,7 +101,9 @@ exports[`Product holder properly renders three products 1`] = `
         aria-label="Add to cart"
         class="store-product__add-button"
         type="button"
-      />
+      >
+        ++
+      </button>
       <div
         class="store-product__name"
       >
@@ -108,7 +120,9 @@ exports[`Product holder properly renders three products 1`] = `
         aria-label="Remove from cart"
         class="store-product__remove-button"
         type="button"
-      />
+      >
+        --
+      </button>
       <span
         aria-label="Amount in cart"
         data-testid="Amount in cart"
@@ -119,7 +133,9 @@ exports[`Product holder properly renders three products 1`] = `
         aria-label="Add to cart"
         class="store-product__add-button"
         type="button"
-      />
+      >
+        ++
+      </button>
       <div
         class="store-product__name"
       >

@@ -18,7 +18,7 @@ function StoreProduct(props) {
         onClick={onRemoveFromCartClick}
         disabled={amountBought === 0}
         type="button"
-      ></button>
+      >--</button>
 
       <span
         aria-label="Amount in cart"
@@ -33,7 +33,7 @@ function StoreProduct(props) {
         disabled={amountBought === productLimit}
         onClick={onAddToCartClick}
         type="button"
-      ></button>
+      >++</button>
 
       <div className="store-product__name">{name}</div>
     </div>
