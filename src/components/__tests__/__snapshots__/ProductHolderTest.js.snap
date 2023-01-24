@@ -2,7 +2,9 @@
 
 exports[`Product holder properly renders a single product 1`] = `
 <div>
-  <div>
+  <div
+    class="product-holder"
+  >
     <div
       class="store-product"
     >
@@ -37,7 +39,9 @@ exports[`Product holder properly renders a single product 1`] = `
 
 exports[`Product holder properly renders three products 1`] = `
 <div>
-  <div>
+  <div
+    class="product-holder"
+  >
     <div
       class="store-product"
     >

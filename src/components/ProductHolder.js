@@ -17,7 +17,7 @@ function ProductHolder({ cart, addToCartFunction, removeFromCartFunction }) {
     })
 
   return (
-    <div>{productsAsHTML}</div>
+    <div className="product-holder">{productsAsHTML}</div>
   )
 }
 
