@@ -11,6 +11,7 @@ exports[`CheckoutPreview renders total cost 1`] = `
 
 exports[`CheckoutPreviewItem renders a single preview item 1`] = `
 <div
+  class="checkout-preview__item-container"
   data-testid="previewItemContainer"
 >
   <div
@@ -47,6 +48,7 @@ exports[`CheckoutPreviewItem renders a single preview item 1`] = `
 
 exports[`CheckoutPreviewItem renders multiple items 1`] = `
 <div
+  class="checkout-preview__item-container"
   data-testid="previewItemContainer"
 >
   <div

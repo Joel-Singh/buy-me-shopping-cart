@@ -19,7 +19,7 @@ function CheckoutPreview({ cart }) {
   return (
     <div className="checkout-preview">
       <h2>Checkout</h2>
-      <div data-testid="previewItemContainer">{cartAsJSX}</div>
+      <div data-testid="previewItemContainer" className="checkout-preview__item-container">{cartAsJSX}</div>
       <div className="checkout-preview__total-cost">Total Cost = {totalCost}</div>
     </div>
   );
