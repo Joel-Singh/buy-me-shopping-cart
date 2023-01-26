@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function CheckoutPreview({ cart }) {
   const cartAsJSX =
     cart.map((cartItem) =>
@@ -25,6 +27,11 @@ function CheckoutPreview({ cart }) {
       <h2>Checkout</h2>
       <div className="checkout-preview__total-cost">Total Cost = {totalCost}</div>
       <div data-testid="previewItemContainer" className="checkout-preview__item-container">{cartAsJSX}</div>
+      <Link to="/bought">
+        <button type='button'>
+          BUY!!!!!!!!!
+        </ button>
+      </Link>
     </div>
   );
 }
