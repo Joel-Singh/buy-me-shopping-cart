@@ -126,6 +126,10 @@ a {
   grid-auto-rows: 200px;
 }
 
+.checkout-preview__total-cost {
+  text-align: center;
+}
+
 .checkout-preview img {
   height: 50%;
 }
