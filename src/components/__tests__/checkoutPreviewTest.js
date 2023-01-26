@@ -40,3 +40,16 @@ test("CheckoutPreview renders total cost", () => {
   const totalHTMLContainer = screen.getByText("Total Cost", {exact: false})
   expect(totalHTMLContainer).toMatchSnapshot()
 })
+
+test("CheckoutPreviewItem doesn't render items not bought", () => {
+  const cart = [
+    createCartItem("Me Smiling", 32, 0, "placeholder"),
+  ]
+
+  render(<CheckoutPreview cart={cart} />)
+
+  const previewItemContainer = screen.getByTestId("previewItemContainer")
+
+
+  expect(previewItemContainer.innerHTML).toBe("")
+})

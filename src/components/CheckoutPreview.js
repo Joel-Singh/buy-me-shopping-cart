@@ -3,6 +3,10 @@ function CheckoutPreview({ cart }) {
     cart.map((cartItem) =>
     {
       const {name, price, amountBought, image} = cartItem;
+
+      if (amountBought === 0)
+        return null
+
       return (
         <CheckoutPreviewItem
           name={name}
